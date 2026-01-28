@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <!-- Primary Colors -->
+    <color name="sunset_primary">#FF6F61</color>     <!-- Gün batımı turuncusu -->
+    <color name="sunset_primary_dark">#E65A50</color>
+
+    <!-- Secondary Colors -->
+    <color name="sunset_secondary">#6A4C93</color>   <!-- Mor ton -->
+    <color name="sunset_accent">#FFD166</color>      <!-- Sarımsı vurgu -->
+
+    <!-- Background & Text -->
+    <color name="background_light">#FFF8F0</color>
+    <color name="text_primary">#2E2E2E</color>
+    <color name="text_secondary">#6F6F6F</color>
+
+    <!-- Buttons -->
+    <color name="button_text">#FFFFFF</color>
+</resources>

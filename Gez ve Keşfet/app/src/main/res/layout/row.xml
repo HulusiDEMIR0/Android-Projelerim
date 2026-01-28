@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <!-- YER TİPİ -->
+        <TextView
+            android:id="@+id/tvPlaceType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Park - Ören Yeri"
+            android:textStyle="bold"
+            android:textSize="13sp"
+            android:textColor="@color/text_secondary"
+            android:alpha="0.7"/>
+
+        <!-- KULLANICI - KONUM - PUAN -->
+        <TextView
+            android:id="@+id/tvMainInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="hulusi • Galata • ⭐ 8.5"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary"/>
+
+        <!-- FOTOĞRAF -->
+        <ImageView
+            android:id="@+id/ivPostImage"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="10dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/images"/>
+
+        <!-- YORUM -->
+        <TextView
+            android:id="@+id/tvComment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Burası çok temiz ve huzurluydu."
+            android:textColor="@color/text_primary"/>
+
+        <!-- EK PUANLAR / DETAYLAR -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <!-- 1 -->
+            <TextView
+                android:id="@+id/tvExtraLabel1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Temizlik"/>
+
+            <TextView
+                android:id="@+id/tvExtraValue1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=": 8.0"
+                android:paddingEnd="12dp"/>
+
+            <!-- 2 -->
+            <TextView
+                android:id="@+id/tvExtraLabel2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Yeşillik"/>
+
+            <TextView
+                android:id="@+id/tvExtraValue2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=": 9.0"
+                android:paddingEnd="12dp"/>
+
+            <!-- 3 -->
+            <TextView
+                android:id="@+id/tvExtraLabel3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hava"/>
+
+            <TextView
+                android:id="@+id/tvExtraValue3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=": 7.5"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

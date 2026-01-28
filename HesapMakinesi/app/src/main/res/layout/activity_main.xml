@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <!-- 1. Satır (C, (), %, /) -->
+
+    <Button
+        android:id="@+id/Delete"
+        android:layout_width="74dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="310dp"
+        android:backgroundTint="@color/black"
+        android:text="⌫"
+        android:textColor="@color/green"
+        android:textSize="70px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.354" />
+
+    <TextView
+        android:id="@+id/TextResult"
+        android:layout_width="359dp"
+        android:layout_height="86dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="148dp"
+        android:background="@null"
+        android:padding="18dp"
+        android:text="0"
+        android:textAlignment="viewEnd"
+        android:textColor="@color/buttoncolortext"
+        android:textSize="45sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.275"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/Clean"
+        android:layout_width="74dp"
+        android:layout_height="71dp"
+        android:layout_marginStart="28dp"
+        android:backgroundTint="@color/buttoncolorbackup"
+        android:text="C"
+        android:textColor="@color/red"
+        android:textSize="70px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.465" />
+
+    <Button
+        android:id="@+id/Parentez"
+        android:layout_width="74dp"
+        android:layout_height="71dp"
+        android:backgroundTint="@color/buttoncolorbackup"
+        android:text="( )"
+        android:textColor="@color/green"
+        android:textSize="70px"
+        app:layout_constraintTop_toTopOf="@id/Clean"
+        app:layout_constraintStart_toEndOf="@id/Clean"
+        android:layout_marginStart="20dp" />
+
+    <Button
+        android:id="@+id/Yüzde"
+        android:layout_width="74dp"
+        android:layout_height="71dp"
+        android:backgroundTint="@color/buttoncolorbackup"
+        android:text="%"
+        android:textColor="@color/green"
+        android:textSize="80px"
+        app:layout_constraintTop_toTopOf="@id/Clean"
+        app:layout_constraintStart_toEndOf="@id/Parentez"
+        android:layout_marginStart="20dp" />
+
+    <Button
+        android:id="@+id/Bölme"
+        android:layout_width="74dp"
+        android:layout_height="71dp"
+        android:backgroundTint="@color/buttoncolorbackup"
+        android:text="÷"
+        android:textColor="@color/green"
+        android:textSize="70px"
+        app:layout_constraintTop_toTopOf="@id/Clean"
+        app:layout_constraintStart_toEndOf="@id/Yüzde"
+        android:layout_marginStart="20dp" />
+
+    <!-- 2. Satır (7,8,9,*) -->
+    <Button
+        android:id="@+id/Number7"
+        android:layout_width="74dp"
+        android:layout_height="71dp"
+        android:backgroundTint="@color/buttoncolorbackup"
+        android:text="7"
+        android:textColor="@color/buttoncolortext"
+        android:textSize="65px"
+        app:layout_constraintTop_toBottomOf="@id/Clean"
+        app:layout_constraintStart_toStartOf="@id/Clean"
+        android:layout_marginTop="12dp" />
+
+    <Button
+        android:id="@+id/Number8"
+        android:layout_width="74dp"
+        android:layout_height="71dp"
+        android:backgroundTint="@color/buttoncolorbackup"
+        android:text="8"
+        android:textColor="@color/buttoncolortext"
+        android:textSize="65px"
+        app:layout_constraintTop_toTopOf="@id/Number7"
+        app:layout_constraintStart_toStartOf="@id/Parentez" />
+
+    <Button
+        android:id="@+id/Number9"
+        android:layout_width="74dp"
+        android:layout_height="71dp"
+        android:backgroundTint="@color/buttoncolorbackup"
+        android:text="9"
+        android:textColor="@color/buttoncolortext"
+        android:textSize="65px"
+        app:layout_constraintTop_toTopOf="@id/Number7"
+        app:layout_constraintStart_toStartOf="@id/Yüzde" />
+
+    <Button
+        android:id="@+id/Carpma"
+        android:layout_width="74dp"
+        android:layout_height="71dp"
+        android:backgroundTint="@color/buttoncolorbackup"
+        android:text="×"
+        android:textColor="@color/green"
+        android:textSize="80px"
+        app:layout_constraintTop_toTopOf="@id/Number7"
+        app:layout_constraintStart_toStartOf="@id/Bölme" />
+
+    <!-- 3. Satır (4,5,6,-) -->
+    <Button
+        android:id="@+id/Number4"
+        android:layout_width="74dp"
+        android:layout_height="71dp"
+        android:backgroundTint="@color/buttoncolorbackup"
+        android:text="4"
+        android:textColor="@color/buttoncolortext"
+        android:textSize="65px"
+        app:layout_constraintTop_toBottomOf="@id/Number7"
+        app:layout_constraintStart_toStartOf="@id/Clean"
+        android:layout_marginTop="12dp" />
+
+    <Button
+        android:id="@+id/Number5"
+        android:layout_width="74dp"
+        android:layout_height="71dp"
+        android:backgroundTint="@color/buttoncolorbackup"
+        android:text="5"
+        android:textColor="@color/buttoncolortext"
+        android:textSize="65px"
+        app:layout_constraintTop_toTopOf="@id/Number4"
+        app:layout_constraintStart_toStartOf="@id/Parentez" />
+
+    <Button
+        android:id="@+id/Number6"
+        android:layout_width="74dp"
+        android:layout_height="71dp"
+        android:backgroundTint="@color/buttoncolorbackup"
+        android:text="6"
+        android:textColor="@color/buttoncolortext"
+        android:textSize="65px"
+        app:layout_constraintTop_toTopOf="@id/Number4"
+        app:layout_constraintStart_toStartOf="@id/Yüzde" />
+
+    <Button
+        android:id="@+id/Cıkarma"
+        android:layout_width="74dp"
+        android:layout_height="71dp"
+        android:backgroundTint="@color/buttoncolorbackup"
+        android:text="-"
+        android:textColor="@color/green"
+        android:textSize="85px"
+        app:layout_constraintTop_toTopOf="@id/Number4"
+        app:layout_constraintStart_toStartOf="@id/Bölme" />
+
+    <!-- 4. Satır (1,2,3,+) -->
+    <Button
+        android:id="@+id/Number1"
+        android:layout_width="74dp"
+        android:layout_height="71dp"
+        android:backgroundTint="@color/buttoncolorbackup"
+        android:text="1"
+        android:textColor="@color/buttoncolortext"
+        android:textSize="65px"
+        app:layout_constraintTop_toBottomOf="@id/Number4"
+        app:layout_constraintStart_toStartOf="@id/Clean"
+        android:layout_marginTop="12dp" />
+
+    <Button
+        android:id="@+id/Number2"
+        android:layout_width="74dp"
+        android:layout_height="71dp"
+        android:backgroundTint="@color/buttoncolorbackup"
+        android:text="2"
+        android:textColor="@color/buttoncolortext"
+        android:textSize="65px"
+        app:layout_constraintTop_toTopOf="@id/Number1"
+        app:layout_constraintStart_toStartOf="@id/Parentez" />
+
+    <Button
+        android:id="@+id/Number3"
+        android:layout_width="74dp"
+        android:layout_height="71dp"
+        android:backgroundTint="@color/buttoncolorbackup"
+        android:text="3"
+        android:textColor="@color/buttoncolortext"
+        android:textSize="65px"
+        app:layout_constraintTop_toTopOf="@id/Number1"
+        app:layout_constraintStart_toStartOf="@id/Yüzde" />
+
+    <Button
+        android:id="@+id/Toplama"
+        android:layout_width="74dp"
+        android:layout_height="71dp"
+        android:backgroundTint="@color/buttoncolorbackup"
+        android:text="+"
+        android:textColor="@color/green"
+        android:textSize="85px"
+        app:layout_constraintTop_toTopOf="@id/Number1"
+        app:layout_constraintStart_toStartOf="@id/Bölme" />
+
+    <!-- 5. Satır (+/-,0,.,=) -->
+    <Button
+        android:id="@+id/PNdeger"
+        android:layout_width="74dp"
+        android:layout_height="71dp"
+        android:backgroundTint="@color/buttoncolorbackup"
+        android:text="+/-"
+        android:textColor="@color/buttoncolortext"
+        android:textSize="45px"
+        app:layout_constraintTop_toBottomOf="@id/Number1"
+        app:layout_constraintStart_toStartOf="@id/Clean"
+        android:layout_marginTop="12dp" />
+
+    <Button
+        android:id="@+id/Number0"
+        android:layout_width="74dp"
+        android:layout_height="71dp"
+        android:backgroundTint="@color/buttoncolorbackup"
+        android:text="0"
+        android:textColor="@color/buttoncolortext"
+        android:textSize="65px"
+        app:layout_constraintTop_toTopOf="@id/PNdeger"
+        app:layout_constraintStart_toStartOf="@id/Parentez" />
+
+    <Button
+        android:id="@+id/Ondalık"
+        android:layout_width="74dp"
+        android:layout_height="71dp"
+        android:backgroundTint="@color/buttoncolorbackup"
+        android:text=","
+        android:textColor="@color/buttoncolortext"
+        android:textSize="55px"
+        app:layout_constraintTop_toTopOf="@id/PNdeger"
+        app:layout_constraintStart_toStartOf="@id/Yüzde" />
+
+    <Button
+        android:id="@+id/Esittir"
+        android:layout_width="74dp"
+        android:layout_height="71dp"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="328dp"
+        android:backgroundTint="@color/esittirbutton"
+        android:text="="
+        android:textColor="@color/buttoncolortext"
+        android:textSize="80px"
+        app:layout_constraintStart_toStartOf="@id/Bölme"
+        app:layout_constraintTop_toTopOf="@id/PNdeger" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

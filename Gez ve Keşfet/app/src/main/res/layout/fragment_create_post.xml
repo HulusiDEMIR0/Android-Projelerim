@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreatePostFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- FOTOĞRAF -->
+        <FrameLayout
+            android:id="@+id/layoutImageUpload"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@color/button_text"
+            android:foreground="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true">
+
+            <!-- FOTOĞRAF ÖNİZLEME -->
+            <ImageView
+                android:id="@+id/ivPreview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:visibility="gone" />
+
+            <!-- ORTA ALAN (YAZI + BUTON) -->
+            <LinearLayout
+                android:id="@+id/layoutPlaceholder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_gravity="center">
+
+                <!-- Silik yazı -->
+                <TextView
+                    android:id="@+id/tvUploadText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fotoğraf Yükle"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_secondary"
+                    android:alpha="0.6"
+                    android:layout_marginBottom="8dp"/>
+
+                <!-- Artı butonu -->
+                <ImageView
+                    android:id="@+id/ivAddPhoto"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/add_circle_24"
+                    android:contentDescription="Fotoğraf Ekle"
+                    android:tint="@color/text_secondary"/>
+            </LinearLayout>
+
+        </FrameLayout>
+
+
+
+        <!-- KONUM + PUAN -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Konum *">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:hint="Puan *">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etRating"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:inputType="numberDecimal"
+                    android:textStyle="bold"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <!-- YER TİPİ -->
+        <Spinner
+            android:id="@+id/spinnerPlaceType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp" />
+
+        <!-- YORUM -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:hint="Yorumunu bırak">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etComment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minLines="3"
+                android:gravity="top"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- RESTORAN -->
+        <LinearLayout
+            android:id="@+id/layoutRestaurant"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:visibility="gone">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Menü Puanı">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etMenuRating"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:hint="Fiyat (₺ / ₺₺ / ₺₺₺)">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etPriceLevel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <!-- MÜZE -->
+        <LinearLayout
+            android:id="@+id/layoutMuseum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="16dp"
+            android:visibility="gone">
+
+            <Spinner
+                android:id="@+id/spinnerTicketType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="Bilet Fiyatı">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etTicketPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"/>
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <!-- PARK / ÖREN YERİ -->
+        <LinearLayout
+            android:id="@+id/layoutPark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="16dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Park / Ören Yeri Puanları"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+
+                <!-- Temizlik -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Temizlik">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etCleanliness"
+                        android:inputType="numberDecimal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Yeşillik -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    android:hint="Yeşillik">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etGreenery"
+                        android:inputType="numberDecimal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Hava -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    android:hint="Hava">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etAir"
+                        android:inputType="numberDecimal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- KAYDET -->
+        <Button
+            android:id="@+id/btnSavePost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kaydet"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="@color/black"
+            android:textColor="@color/button_text"/>
+
+    </LinearLayout>
+
+</ScrollView>

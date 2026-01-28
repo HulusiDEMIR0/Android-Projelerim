@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/akıs_feed"
+        android:title="Akış"
+        android:icon="@drawable/add_circle_24"/>
+
+    <item
+        android:id="@+id/post_feed"
+        android:title="Paylaş"
+        android:icon="@drawable/add_circle_24"/>
+
+    <item
+        android:id="@+id/cikis"
+        android:title="Çıkış"
+        android:icon="@drawable/outline_cancel_24"/>
+</menu>
